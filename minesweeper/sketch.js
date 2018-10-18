@@ -15,6 +15,13 @@ function setup() {
             grid[i][j] = new Cell(i, j, w); // single cell object (instantiation)
         }
     }
+
+    // and calculate each single cell's neighboring bee
+    for(let i = 0; i < cols; i++) {
+        for(let j = 0; j < rows; j++) {
+            grid[i][j].countBees();
+        }
+    }
 }
 
 // start draw
